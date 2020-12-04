@@ -4,7 +4,6 @@ class Counter extends Component {
 	//Includes any data this component needs
 	state = {
 		count: 69,
-		tags: ["tag1", "tag2", "tag3"],
 	};
 
 	//
@@ -37,7 +36,7 @@ class Counter extends Component {
 
 	//Event handler for increment button. Note use of arrow function
 	handleIncrement = () => {
-		console.log("Hi", this.state.count);
+		this.setState({ count: this.state.count + 1 });
 	};
 }
 
